@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humber Taskmate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Humber Taskmate</h1>
+    </header>
+
+    <div class="task-form">
+      <input type="text" id="taskTitle" placeholder="Task Title" required />
+      <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+      <input type="date" id="taskDueDate" required />
+      
+      <label for="taskPriority">Priority:</label>
+      <select id="taskPriority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+
+      <button id="addTaskButton">Add Task</button>
+    </div>
+
+    <div class="task-list">
+      <h2>Your Tasks</h2>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Edit Task</h2>
+      <input type="text" id="editTitle" />
+      <textarea id="editDescription"></textarea>
+      <input type="date" id="editDueDate" />
+      <select id="editPriority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="saveChanges">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
